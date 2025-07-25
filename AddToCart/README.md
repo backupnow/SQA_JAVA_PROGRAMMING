@@ -26,9 +26,9 @@ Status          :   [Pass/Fail]
 
 # Result Run mvn clean test
 ------------------------------------------
-on start: TC_INV_003 -addToCart
-on test start: addToCartFunctionalityTest
-on test success: addToCartFunctionalityTest 
+on start: TC_INV_003 -addToCart, 
+on test start: addToCartFunctionalityTest, 
+on test success: addToCartFunctionalityTest. 
 
 # Microsoft Excel
 ![alt text](image.png)
