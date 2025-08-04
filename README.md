@@ -1,6 +1,9 @@
 # JAVA_PROGRAMMING
 
-Kumpulan proyek Java yang dikembangkan menggunakan Maven dan Framework TestNG & Selenium Web Driver untuk eksplorasi pemrograman, pengujian otomatis, dan analisis performa.
+# JAVA_PROGRAMMING
+
+Kumpulan proyek Java yang dikembangkan menggunakan Maven serta framework TestNG, Selenium WebDriver, Appium, dan REST Assured untuk eksplorasi pemrograman, pengujian otomatis (web & mobile), dan analisis performa API.
+
 
 ---
 #by.Wilder
