@@ -1,0 +1,14 @@
+-Bahan QA
+https://qaautomation.expert/2023/10/12/rest-assured-tutorials/
+
+https://qaautomation.expert/2021/06/16/extraction-from-json-in-rest-assured/
+
+https://qaautomation.expert/
+
+- Link Case
+https://688a203a4c55d5c739551b5c.mockapi.io
+
+- Dependecies
+https://qaautomation.expert/2021/06/16/extraction-from-json-in-rest-assured/
+
+https://688b3e982a52cabb9f50ce87.mockapi.io

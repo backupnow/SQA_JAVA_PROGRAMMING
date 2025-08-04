@@ -1,0 +1,1573 @@
+{
+	"info": {
+		"_postman_id": "e64ba489-82f1-4210-a6cd-50309b81e684",
+		"name": "SIMRA API",
+		"description": "**Sistem Informasi Manajemen Rencana Anggaran API (SIMRA API)**\n\nMenyediakan antarmuka terstruktur berbasis REST yang memungkinkan sistem frontend, aplikasi mobile, maupun layanan eksternal untuk berinteraksi dengan data rencana anggaran.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40193642"
+	},
+	"item": [
+		{
+			"name": "Accounts",
+			"item": [
+				{
+					"name": "Sign In",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response status code must be 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response time is less than 1.5 seconds\", function () {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response must be object\", () => {\r",
+									"    const responseData = pm.response.json();\r",
+									"    pm.expect(responseData).to.be.an('object');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response must be have token string\", () => {\r",
+									"    const responseData = pm.response.json();\r",
+									"    pm.expect(responseData).to.have.property('token').that.is.a('string');\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Response must be have header content-type is application/json\", () => {\r",
+									"    pm.expect(pm.response.headers.get('Content-Type')).to.be.equal(\"application/json\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"// pm.test(\"Validate the response schema for 'products' endpoint\", function () {\r",
+									"//     const responseData = pm.response.json();\r",
+									"//     console.log(responseData.token.split(\".\").length);\r",
+									"//     pm.expect(3, \"Error bro\").equal(responseData.token.split(\".\").length);\r",
+									"// });"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"123qwe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/accounts/signin/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"accounts",
+								"signin",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/accounts/signin/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"accounts",
+										"signin",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 09 May 2025 23:31:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"f5f18d0b52b6d64212eab7788c4789e8a76ec526\"\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"\",\r\n    \"password\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/accounts/signin/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"accounts",
+										"signin",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 09 May 2025 23:31:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "89"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": [\n        \"This field may not be blank.\"\n    ],\n    \"password\": [\n        \"This field may not be blank.\"\n    ]\n}"
+						},
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"auauau\",\r\n    \"password\": \"uauaua\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/accounts/signin/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"accounts",
+										"signin",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 09 May 2025 23:32:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.8"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "Vary",
+									"value": "Cookie"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"non_field_errors\": [\n        \"Unable to log in with provided credentials.\"\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Budgets",
+			"item": [
+				{
+					"name": "Plan Item Temps (Item Temporary)",
+					"item": [
+						{
+							"name": "Get Plan Item Temps",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plan-item-temps/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plan-item-temps",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Initialize Plan Item Temp",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plan-item-temps/initialize/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plan-item-temps",
+										"initialize",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Plan Item Temp",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plan-item-temps/6/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plan-item-temps",
+										"6",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Plan Item Temp",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 800000,\r\n    \"requirement\": 800000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plan-item-temps/11/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plan-item-temps",
+										"11",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Plan Item Temp",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"amount\": 2000000,\r\n    \"requirement\": 1500000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plan-item-temps/11/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plan-item-temps",
+										"11",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Plans (Rencana Anggaran)",
+					"item": [
+						{
+							"name": "Get Plans",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Budget 005\",\r\n    \"origin\": \"From 005\"\r\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plans/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plans",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Plan",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Budget Plan 02\",\r\n    \"description\": \"Lorem ipsum\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plans/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plans",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Plan",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plans/2/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plans",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Informasi Plan",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Plan Items",
+					"item": [
+						{
+							"name": "Get Plan Items",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plan-items/?plan=2",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plan-items",
+										""
+									],
+									"query": [
+										{
+											"key": "plan",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Plan Items",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usage\": 15000000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/budgets/plan-items/2/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"budgets",
+										"plan-items",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Catalogs",
+			"item": [
+				{
+					"name": "Groups",
+					"item": [
+						{
+							"name": "Get Groups",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const responseData = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Response status code must be 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response time is less than 1.5 seconds\", function () {\r",
+											"  pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response must be object\", () => {\r",
+											"    pm.expect(responseData).to.be.an('object');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response results must be array\", () => {\r",
+											"    const { results } = responseData;\r",
+											"    pm.expect(results).to.be.an('array');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response paginate next must be string or null\", () => {\r",
+											"    const { next } = responseData;\r",
+											"    pm.expect(next).to.satisfy((s) => {\r",
+											"        return s === null || typeof s == 'string'\r",
+											"    });\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response paginate previous must be string or null\", () => {\r",
+											"    const { previous } = responseData;\r",
+											"    pm.expect(previous).to.satisfy((data) => {\r",
+											"        return data === null || typeof data == 'string'\r",
+											"    });\r",
+											"});\r",
+											"\r",
+											"// pm.test(\"Response must be have token string\", () => {\r",
+											"//     const responseData = pm.response.json();\r",
+											"//     pm.expect(responseData).to.have.property('token').that.is.a('string');\r",
+											"// })\r",
+											"\r",
+											"// pm.test(\"Response must be have header content-type is application/json\", () => {\r",
+											"//     pm.expect(pm.response.headers.get('Content-Type')).to.be.equal(\"application/json\");\r",
+											"// });\r",
+											"\r",
+											"\r",
+											"// pm.test(\"Validate the response schema for 'products' endpoint\", function () {\r",
+											"//     const responseData = pm.response.json();\r",
+											"//     console.log(responseData.token.split(\".\").length);\r",
+											"//     pm.expect(3, \"Error bro\").equal(responseData.token.split(\".\").length);\r",
+											"// });"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/groups/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"groups",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Group",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const responseData = pm.response.json();\r",
+											"const responseTime = 1500;\r",
+											"\r",
+											"\r",
+											"pm.test(\"Response status code must be 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response time is less than 1.5 seconds\", function () {\r",
+											"  pm.expect(pm.response.responseTime).to.be.below(responseTime);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response must be object\", () => {\r",
+											"    pm.expect(responseData).to.be.an('object');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response id must be number\", () => {\r",
+											"    const { id } = responseData;\r",
+											"    pm.environment.set(\"CURRENT_GROUP_ID\", id);\r",
+											"    pm.expect(id).to.be.an('number');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response title must be string\", () => {\r",
+											"    const { title } = responseData;\r",
+											"    pm.expect(title).to.be.an('string');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response origin must be string\", () => {\r",
+											"    const { origin } = responseData;\r",
+											"    pm.expect(origin).to.be.an('string');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response create and update must be string\", () => {\r",
+											"    const { created_at, updated_at } = responseData;\r",
+											"    pm.expect(created_at).to.be.an('string');\r",
+											"    pm.expect(updated_at).to.be.an('string');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response owner must be number\", () => {\r",
+											"    const { owner } = responseData;\r",
+											"    pm.expect(owner).to.be.an('number');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response must be have header content-type is application/json\", () => {\r",
+											"    pm.expect(pm.response.headers.get('Content-Type')).to.be.equal(\"application/json\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Mobil Dinas\",\r\n    \"origin\": \"Pemkot DKI Jakarta\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/groups/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"groups",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Group",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const responseData = pm.response.json();\r",
+											"const responseTime = 1500;\r",
+											"\r",
+											"pm.test(\"Response status code must be 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response time is less than 1.5 seconds\", function () {\r",
+											"  pm.expect(pm.response.responseTime).to.be.below(responseTime);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response must be object\", () => {\r",
+											"    pm.expect(responseData).to.be.an('object');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response id must be number\", () => {\r",
+											"    const { id } = responseData;\r",
+											"    pm.expect(id).to.be.an('number');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response title must be string\", () => {\r",
+											"    const { title } = responseData;\r",
+											"    pm.expect(title).to.be.an('string');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response origin must be string\", () => {\r",
+											"    const { origin } = responseData;\r",
+											"    pm.expect(origin).to.be.an('string');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response create and update must be string\", () => {\r",
+											"    const { created_at, updated_at } = responseData;\r",
+											"    pm.expect(created_at).to.be.an('string');\r",
+											"    pm.expect(updated_at).to.be.an('string');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response owner must be number\", () => {\r",
+											"    const { owner } = responseData;\r",
+											"    pm.expect(owner).to.be.an('number');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response must be have header content-type is application/json\", () => {\r",
+											"    pm.expect(pm.response.headers.get('Content-Type')).to.be.equal(\"application/json\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Group 03\",\r\n    \"origin\": \"Origin 01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/groups/{{CURRENT_GROUP_ID}}/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"groups",
+										"{{CURRENT_GROUP_ID}}",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Group",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const responseData = pm.response.json();\r",
+											"const responseTime = 1500;\r",
+											"\r",
+											"pm.test(\"Response status code must be 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response time is less than 1.5 seconds\", function () {\r",
+											"  pm.expect(pm.response.responseTime).to.be.below(responseTime);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response must be object\", () => {\r",
+											"    pm.expect(responseData).to.be.an('object');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response id must be number\", () => {\r",
+											"    const { id } = responseData;\r",
+											"    pm.expect(id).to.be.an('number');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response title must be string\", () => {\r",
+											"    const { title } = responseData;\r",
+											"    pm.expect(title).to.be.an('string');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response origin must be string\", () => {\r",
+											"    const { origin } = responseData;\r",
+											"    pm.expect(origin).to.be.an('string');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response create and update must be string\", () => {\r",
+											"    const { created_at, updated_at } = responseData;\r",
+											"    pm.expect(created_at).to.be.an('string');\r",
+											"    pm.expect(updated_at).to.be.an('string');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response owner must be number\", () => {\r",
+											"    const { owner } = responseData;\r",
+											"    pm.expect(owner).to.be.an('number');\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response must be have header content-type is application/json\", () => {\r",
+											"    pm.expect(pm.response.headers.get('Content-Type')).to.be.equal(\"application/json\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Kendaraan\",\r\n    \"origin\": \"Pemprov DKI Jakarta\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/groups/{{CURRENT_GROUP_ID}}/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"groups",
+										"{{CURRENT_GROUP_ID}}",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Group",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											"const responseTime = 1500;\r",
+											"\r",
+											"pm.test(\"Response status code must be 204\", function () {\r",
+											"    pm.response.to.have.status(204);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response time is less than 1.5 seconds\", function () {\r",
+											"  pm.expect(pm.response.responseTime).to.be.below(responseTime);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Response status must be No Content\", () => {\r",
+											"    const { status } = pm.response;\r",
+											"    pm.expect(status).an.equal('No Content');\r",
+											"});\r",
+											"\r",
+											"// pm.test(\"Response must be have header content-type is application/json\", () => {\r",
+											"//     // pm.expect(pm.response.headers.get('Content-Type')).to.be.equal(\"application/json\");\r",
+											"// });"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"packages": {},
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/groups/{{CURRENT_GROUP_ID}}/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"groups",
+										"{{CURRENT_GROUP_ID}}",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Informasi Groups",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "OPTIONS",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/groups/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"groups",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Group Items",
+					"item": [
+						{
+							"name": "Get Group Items",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/group-items/?group=1&search=gero",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"group-items",
+										""
+									],
+									"query": [
+										{
+											"key": "group",
+											"value": "1"
+										},
+										{
+											"key": "search",
+											"value": "gero"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Group Item",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"GI 03\",\r\n    \"description\": \"Lorem ipsum\",\r\n    \"group\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/group-items/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"group-items",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Group Item",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/group-items/2/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"group-items",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Group Item",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"name\": \"Gerobak Besi\",\r\n    \"description\": \"Lorem ipsum\",\r\n    \"group\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/group-items/9/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"group-items",
+										"9",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Group Item",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "{{PREFIX}} {{TOKEN}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/catalogs/group-items/2/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"catalogs",
+										"group-items",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,18 @@
+kalo mau jalanin lagi (posisi sudah di install):
+
+1.venv\Scripts\activate
+2.python manage.py runserver
+
+akses http://127.0.0.1:8000/admin 
+di browser
+
+=================================
+
+Tugas :
+mainnya di GroupItems (POSTMAN), dan buat coding nya di file di bawah ini :
+- GroupItemServices.java
+- GroupItem.java
+- GroupItemTest.java
+
+silahkan ikuti sturktur isi kode file sebelumnya misa Group
+
