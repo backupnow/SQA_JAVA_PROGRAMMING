@@ -7,12 +7,3 @@ akses http://127.0.0.1:8000/admin
 di browser
 
 =================================
-
-Tugas :
-mainnya di GroupItems (POSTMAN), dan buat coding nya di file di bawah ini :
-- GroupItemServices.java
-- GroupItem.java
-- GroupItemTest.java
-
-silahkan ikuti sturktur isi kode file sebelumnya misa Group
-
