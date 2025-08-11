@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-11T12:56:58 WIB" name="Calculator Suite" finished-at="2025-08-11T12:57:43 WIB" duration-ms="45296">
+    <groups>
+    </groups>
+    <test started-at="2025-08-11T12:56:58 WIB" name="Test" finished-at="2025-08-11T12:57:43 WIB" duration-ms="45296">
+      <class name="com.android.swagtest.InventoryTest">
+        <test-method signature="TC0010()[pri:0, instance:com.android.swagtest.InventoryTest@1f0f1111]" started-at="2025-08-11T12:56:58 WIB" name="TC0010" finished-at="2025-08-11T12:57:43 WIB" duration-ms="45200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC0010 -->
+      </class> <!-- com.android.swagtest.InventoryTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Calculator Suite -->
+</testng-results>

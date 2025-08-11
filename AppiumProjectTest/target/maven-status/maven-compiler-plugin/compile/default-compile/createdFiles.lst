@@ -1,0 +1,5 @@
+com\android\swagapp\components\HeaderComponent.class
+com\android\swagapp\screens\InventoryScreen.class
+com\android\swagapp\utils\DriverUtil.class
+com\android\swagapp\screens\LoginScreen.class
+com\android\swagapp\utils\DragPositionUtil.class
