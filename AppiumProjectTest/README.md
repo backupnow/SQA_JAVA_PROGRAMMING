@@ -1,5 +1,6 @@
 # Test Cases - SwagLabs eCommerce
 * SOURCE APP : https://github.com/saucelabs/sample-app-mobile/releases/download/2.7.1/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+* Link Record : https://drive.google.com/file/d/1ZxwMGW2PiySlV2oBY2xVduD2d0aKe0u4/view?usp=sharing
 
 ---
 
