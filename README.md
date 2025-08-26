@@ -27,4 +27,3 @@ Tujuan proyek ini adalah untuk mengeksplorasi pemrograman Java, otomasi pengujia
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
 
 ---
-#by.Wilder
