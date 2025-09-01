@@ -3,7 +3,7 @@
 ## 🧪 How To Run Automation test Locally :
 
 1. Clone Repository from github : 
-- git clone : jangan lupa isi kalo dah selesai project
+- git clone : https://github.com/backupnow/SQA_JAVA_PROGRAMMING/tree/master/CuraHealth
 
 2. Local Environment Preparation
 - Java JDK11+
