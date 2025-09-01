@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/your-org/AplikasiHadir.git'
+                git branch: 'master', url: 'https://github.com/backupnow/SQA_JAVA_PROGRAMMING.git'
             }
         }
 
@@ -18,7 +18,7 @@ pipeline {
             steps {
                 publishHTML(target: [
                     reportDir: 'target/ExtentReports',
-                    reportFiles: 'ExtentHtml.html',
+                    reportFiles: 'Spark.html', // atau ExtentHtml.html
                     reportName: 'Extent Report'
                 ])
             }
