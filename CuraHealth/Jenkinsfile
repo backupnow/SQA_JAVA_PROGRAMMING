@@ -10,24 +10,30 @@ pipeline {
 
         stage('Build & Test') {
             steps {
-               bat 'mvn clean test'
+                dir('CuraHealth') {
+                    bat 'mvn clean test'
+                }
             }
         }
 
         stage('Publish Reports') {
             steps {
-                publishHTML(target: [
-                    reportDir: 'target/ExtentReports',
-                    reportFiles: 'Spark.html', // atau ExtentHtml.html
-                    reportName: 'Extent Report'
-                ])
+                dir('CuraHealth') {
+                    publishHTML(target: [
+                        reportDir: 'target/ExtentReports',
+                        reportFiles: 'Spark.html',
+                        reportName: 'Extent Report'
+                    ])
+                }
             }
         }
     }
 
     post {
         always {
-            archiveArtifacts artifacts: 'target/ExtentReports/**', fingerprint: true
+            dir('CuraHealth') {
+                archiveArtifacts artifacts: 'target/ExtentReports/**', fingerprint: true
+            }
         }
     }
 }
