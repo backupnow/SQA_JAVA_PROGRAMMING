@@ -1,0 +1,5 @@
+com\juaracoding\healthcare\definitions\authentications\LoginTest.class
+com\juaracoding\healthcare\definitions\orders\OrdersJanjiTemuTest.class
+com\juaracoding\healthcare\definitions\providers\AuthProviders.class
+com\juaracoding\healthcare\definitions\runners\RunnersApp.class
+com\juaracoding\healthcare\definitions\authentications\Hook.class
