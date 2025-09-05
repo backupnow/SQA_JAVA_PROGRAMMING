@@ -64,6 +64,11 @@
     ├── Branch to Build : */master
     ├── Script Path : CuraHealth/Jenkinsfile
 - Click Save, Run > Build Now
+
+- Tambahkan di Jenkins > Scrip Console, jika hasil report nya tidak pretty : 
+System.clearProperty("hudson.model.DirectoryBrowserSupport.CSP")
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-scripts; default-src 'self'; script-src * 'unsafe-eval'; img-src *; style-src * 'unsafe-inline'; font-src *")
+
 -----------------------------------
 
 #### 🛠️ Technologies Used :
