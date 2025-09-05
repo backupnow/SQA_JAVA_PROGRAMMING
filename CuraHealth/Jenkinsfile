@@ -16,13 +16,13 @@ pipeline {
             }
         }
 
-        stage('Publish Reports') {
+        stage('Publish Cucumber Report') {
             steps {
                 dir('CuraHealth') {
                     publishHTML(target: [
-                        reportDir: 'target/ExtentReports',
-                        reportFiles: 'Spark_Jenkins.html',
-                        reportName: 'Extent Report',
+                        reportDir: 'target/cucumber-reporting',
+                        reportFiles: 'reports.html',
+                        reportName: 'Cucumber Report',
                         keepAll: true,
                         alwaysLinkToLastBuild: true,
                         allowMissing: false
@@ -35,7 +35,7 @@ pipeline {
     post {
         always {
             dir('CuraHealth') {
-                archiveArtifacts artifacts: 'target/ExtentReports/**', fingerprint: true
+                archiveArtifacts artifacts: 'target/cucumber-reporting/**', fingerprint: true
             }
         }
     }
