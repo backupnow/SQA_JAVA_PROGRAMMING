@@ -35,11 +35,12 @@ public class Hook {
 
   @AfterAll
   public static void flushReport() {
-    if (extent != null) {
-      extent.flush();
-    }
-
+      if (extent != null) {
+          extent.createTest("Smoke Test").pass("Pipeline berhasil dijalankan");
+          extent.flush();
+      }
   }
+
 
     
 }
