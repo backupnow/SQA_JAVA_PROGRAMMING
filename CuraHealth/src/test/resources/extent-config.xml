@@ -1,0 +1,9 @@
+<extentreports>
+  <configuration>
+    <theme>standard</theme>
+    <encoding>utf-8</encoding>
+    <documentTitle>CuraHealth Automation Report</documentTitle>
+    <reportName>Test Results</reportName>
+    <enableTimeline>true</enableTimeline>
+  </configuration>
+</extentreports>
