@@ -57,7 +57,13 @@
 - Click Save, Run > Build Now
 
 4. Continuous Integration (CI) dengan Jenkins untuk menjalankan build.
-- jenkinsfile (done) 
+- jenkinsfile (done)
+- silahkan test di jenkins local masing2 dan di bagian configure pipeline :
+    ├── SCM : Git
+    ├── repository URL paste ini : https://github.com/backupnow/SQA_JAVA_PROGRAMMING.git
+    ├── Branch to Build : */master
+    ├── Script Path : CuraHealth/Jenkinsfile
+- Click Save, Run > Build Now
 -----------------------------------
 
 #### 🛠️ Technologies Used :

@@ -8,6 +8,16 @@ pipeline {
             }
         }
 
+        stage('Fix CSP for Spark.html') {
+            steps {
+                script {
+                    System.clearProperty("hudson.model.DirectoryBrowserSupport.CSP")
+                    System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-scripts; default-src 'self'; script-src * 'unsafe-eval'; img-src *; style-src * 'unsafe-inline'; font-src *")
+                }
+            }
+        }
+
+
         stage('Build & Test') {
             steps {
                 dir('CuraHealth') {
@@ -22,7 +32,10 @@ pipeline {
                     publishHTML(target: [
                         reportDir: 'target/ExtentReports',
                         reportFiles: 'Spark.html',
-                        reportName: 'Extent Report'
+                        reportName: 'Extent Report',
+                        keepAll: true,
+                        alwaysLinkToLastBuild: true,
+                        allowMissing: false
                     ])
                 }
             }
