@@ -1,5 +1,16 @@
 C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\authentications\Hook.java
 C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\authentications\LoginTest.java
+C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\authentications\LogOutTest.java
+C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\authentications\NegativeAuthTest.java
+C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\helper\ScreenshotHelper.java
+C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\history\NavigateHistoryToHome.java
+C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\history\NavigateToHistorySteps.java
+C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\history\NegativeHistoryNoData.java
+C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\history\ValidationHistorySteps.java
+C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\history\ValidationLabelsValueSteps.java
+C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\orders\NegativeOrdersSteps.java
 C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\orders\OrdersJanjiTemuTest.java
+C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\profile\NavigateToProfileTest.java
 C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\providers\AuthProviders.java
 C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\runners\RunnersApp.java
+C:\Users\HP\Juara Coding\VSCODE\CuraHealth\src\test\java\com\juaracoding\healthcare\definitions\scroll\NavigateToScroll.java

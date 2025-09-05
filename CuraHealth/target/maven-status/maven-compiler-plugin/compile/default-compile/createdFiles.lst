@@ -1,3 +1,8 @@
-com\juaracoding\healthcare\utils\DriverManager.class
-com\juaracoding\healthcare\pages\DashboardPage.class
+com\juaracoding\healthcare\pages\HistoryPage.class
 com\juaracoding\healthcare\pages\LoginPage.class
+com\juaracoding\healthcare\pages\ProfilePage.class
+com\juaracoding\healthcare\utils\ScrollUpDown.class
+com\juaracoding\healthcare\utils\DriverManager.class
+com\juaracoding\healthcare\utils\ScenarioContext.class
+com\juaracoding\healthcare\pages\DashboardPage.class
+com\juaracoding\healthcare\extends_page\BasePage.class

@@ -1,5 +1,16 @@
 com\juaracoding\healthcare\definitions\authentications\LoginTest.class
+com\juaracoding\healthcare\definitions\orders\NegativeOrdersSteps.class
 com\juaracoding\healthcare\definitions\orders\OrdersJanjiTemuTest.class
+com\juaracoding\healthcare\definitions\history\NavigateHistoryToHome.class
+com\juaracoding\healthcare\definitions\authentications\LogOutTest.class
+com\juaracoding\healthcare\definitions\history\NegativeHistoryNoData.class
+com\juaracoding\healthcare\definitions\authentications\NegativeAuthTest.class
+com\juaracoding\healthcare\definitions\history\ValidationLabelsValueSteps.class
+com\juaracoding\healthcare\definitions\scroll\NavigateToScroll.class
+com\juaracoding\healthcare\definitions\profile\NavigateToProfileTest.class
+com\juaracoding\healthcare\definitions\helper\ScreenshotHelper.class
+com\juaracoding\healthcare\definitions\history\ValidationHistorySteps.class
+com\juaracoding\healthcare\definitions\history\NavigateToHistorySteps.class
 com\juaracoding\healthcare\definitions\providers\AuthProviders.class
 com\juaracoding\healthcare\definitions\runners\RunnersApp.class
 com\juaracoding\healthcare\definitions\authentications\Hook.class

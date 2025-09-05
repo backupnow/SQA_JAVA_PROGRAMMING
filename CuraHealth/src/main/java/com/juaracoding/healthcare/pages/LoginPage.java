@@ -22,6 +22,18 @@ public class LoginPage {
     @FindBy(id = "btn-login")
     private WebElement buttonLogin;
 
+    @FindBy(id = "menu-toggle")
+    private WebElement btnMenuToggle;
+
+    @FindBy(xpath = "//a[text()='Logout']")
+    private WebElement btnLogout;
+
+    @FindBy(xpath = "//h3[text()='We Care About Your Health']")
+    private WebElement healthMessage;
+
+    @FindBy(xpath = "//p[contains(@class, 'text-danger')]")
+    private WebElement errorMessage;
+
     public LoginPage(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(this.driver, this);
@@ -35,11 +47,41 @@ public class LoginPage {
     passwordLogin.sendKeys(value);
   }
 
-  public void buttonLogin(){
+  // tambahan
+  public void setUsername(String username) {
+    emailLogin.sendKeys(username);
+  }
+
+  public void setPassword(String password) {
+    passwordLogin.sendKeys(password);
+  }
+
+  public void buttonLogin() {
     buttonLogin.click();
   }
 
-  public void loginPerform(){
+  public void buttonLogOut() {
+    btnLogout.click();
+  }
+
+  public String messageHealth() {
+    return healthMessage.getText();
+  }
+
+  public void clickMenuToggle() {
+    btnMenuToggle.click();
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+    wait.until(ExpectedConditions.visibilityOf(btnMenuToggle));
+  }
+
+  // jika tidak ketutup otomatis
+  public void closeMenuToggle() {
+    if (btnMenuToggle.isDisplayed()) {
+      btnMenuToggle.click();
+    }
+  }
+
+  public void loginPerform() {
     setEmailLogin("John Doe");
     setPasswordLogin("ThisIsNotAPassword");
     buttonLogin();
@@ -56,5 +98,18 @@ public class LoginPage {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     wait.until(ExpectedConditions.urlContains("/#appointment"));
   }
+
+  public String waitMessageHealth() {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+    wait.until(ExpectedConditions.visibilityOf(healthMessage));
+    return healthMessage.getText();
+  }
+
+  public String messageError() {
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+    wait.until(ExpectedConditions.visibilityOf(errorMessage));
+    return errorMessage.getText();
+  }
+
     
 }

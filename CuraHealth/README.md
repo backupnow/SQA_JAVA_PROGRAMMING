@@ -55,7 +55,7 @@
                         ├── Index page[s] : Spark.html
 
 - Click Save, Run > Build Now
-  
+
 4. Continuous Integration (CI) dengan Jenkins untuk menjalankan build.
 - jenkinsfile (done) 
 -----------------------------------

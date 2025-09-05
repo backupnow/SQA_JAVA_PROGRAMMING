@@ -17,13 +17,13 @@ import io.cucumber.java.en.When;
 public class LoginTest extends AuthProviders {
 
     @Given("pengguna masuk ke halaman login.")
-    public void step01(){
+    public void step01() {
         Hook.driver = this;
         preTest();
     }
 
     @When("user klik button make appointment")
-    public void step02(){
+    public void step02() {
         dashboardPage().buttonMakeAppointment();
     }
 
@@ -34,7 +34,7 @@ public class LoginTest extends AuthProviders {
     }
 
     @Then("user di bawa kehalaman dengan url {string}")
-    public void step04(String url){
+    public void step04(String url) {
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(20));
         wait.until(ExpectedConditions.urlContains(url));
         DashboardPage dashboardPage = new DashboardPage(getDriver());
