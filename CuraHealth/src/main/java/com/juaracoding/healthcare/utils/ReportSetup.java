@@ -1,11 +1,11 @@
-package com.juaracoding.healthcare.definitions;
+package com.juaracoding.healthcare.utils;
 
 import java.io.IOException;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
-public class ExtentManager {
+public class ReportSetup {
 
     public static ExtentReports createInstance() throws IOException {
         String env = System.getenv("JENKINS_HOME");
