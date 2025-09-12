@@ -60,14 +60,4 @@ Setelah test dijalankan, laporan akan tersedia di folder target/ dalam format:
 Laporan ini dihasilkan oleh Extent Report dan dapat digunakan untuk review hasil pengujian oleh tim QA maupun stakeholder.
 
 ---
-### 📚 Dokumentasi Tambahan
-
-- [Cucumber Docs](https://cucumber.io/docs/guides/10-minute-tutorial/)
-- [Selenium Docs](https://www.selenium.dev/documentation/)
-- [TestNG Docs](https://testng.org/doc/)
-- [Extent Report Guide](https://github.com/extent-framework/extentreports-java)
-
-## 🎥 Preview Test Automation
-
-![Demo](https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif)
 
