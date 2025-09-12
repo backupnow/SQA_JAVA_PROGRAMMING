@@ -1,8 +1,9 @@
 # ✅ Aplikasi Hadir
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Java Version](https://img.shields.io/badge/java-11%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
+![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![Java](https://img.shields.io/badge/java-11%2B-blue)
+![TestNG](https://img.shields.io/badge/TestNG-7.10.2-orange)
+![Selenium](https://img.shields.io/badge/Selenium-4.34.0-green)
 
 Aplikasi Hadir adalah project automation testing berbasis web untuk sistem absensi online. Dibangun dengan pendekatan **BDD (Behavior Driven Development)** menggunakan Cucumber, Selenium WebDriver, dan TestNG, project ini bertujuan untuk memastikan kualitas aplikasi HADIR melalui skenario pengujian yang mudah dibaca dan dijalankan.
 
@@ -48,6 +49,7 @@ maven-javadoc-plugin: Membuat dokumentasi Java
 maven-surefire-report-plugin: Membuat laporan hasil test
 maven-project-info-reports-plugin: Menyediakan informasi proyek seperti dependensi dan konfigurasi build
 
+---
 📄 Laporan Test 
 Setelah test dijalankan, laporan akan tersedia di folder target/ dalam format:
 
@@ -56,4 +58,16 @@ Setelah test dijalankan, laporan akan tersedia di folder target/ dalam format:
 📸 Screenshot untuk skenario yang gagal
 
 Laporan ini dihasilkan oleh Extent Report dan dapat digunakan untuk review hasil pengujian oleh tim QA maupun stakeholder.
+
+---
+### 📚 Dokumentasi Tambahan
+
+- [Cucumber Docs](https://cucumber.io/docs/guides/10-minute-tutorial/)
+- [Selenium Docs](https://www.selenium.dev/documentation/)
+- [TestNG Docs](https://testng.org/doc/)
+- [Extent Report Guide](https://github.com/extent-framework/extentreports-java)
+
+## 🎥 Preview Test Automation
+
+![Demo](https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif)
 
