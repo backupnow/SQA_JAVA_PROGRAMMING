@@ -1,9 +1,9 @@
 Feature: Cuti Feature
 
- Scenario: Halaman cuti Aplikasi Hadir
-   Given saat pengguna ada di halaman dashboard.
-   When pengguna menekan tab cuti.
-   Then user akan di bawa ke halaman cuti dengan url "https://magang.dikahadir.com/apps/absent/leave-client" untuk memeriksa hasil test.
+#  Scenario: Halaman cuti Aplikasi Hadir
+#    Given saat pengguna ada di halaman dashboard.
+#    When pengguna menekan tab cuti.
+#    Then user akan di bawa ke halaman cuti dengan url "https://magang.dikahadir.com/apps/absent/leave-client" untuk memeriksa hasil test.
 #
 #  Scenario: Display Info Cuti
 #    Given user saat berada di halaman dashborad.

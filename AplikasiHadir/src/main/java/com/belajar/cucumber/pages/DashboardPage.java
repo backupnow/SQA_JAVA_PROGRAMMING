@@ -29,7 +29,6 @@ public class DashboardPage {
   @FindBy(xpath = "//img[@alt='Koreksi Absen']")
   private WebElement koreksiIcon;
 
-  // BARU 
   @FindBy(xpath = "//img[@alt='Izin']")
   private WebElement buttonIzin;
 

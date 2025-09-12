@@ -1,5 +1,7 @@
 package com.belajar.cucumber.definitions.izin;
 
+import org.testng.Assert;
+
 import com.belajar.cucumber.definitions.authentications.Hook;
 import com.belajar.cucumber.definitions.providers.AuthProviders;
 
@@ -22,7 +24,7 @@ public class NegativeResetPulangCepat extends AuthProviders {
         izinpage().buttonAjukanCepat();
     }
 
-    @And("Pengguna menginput data berupa : catatan {string}, tanggal {string}, jam {int} menit {int}.")
+    @And("Pengguna menginput data berupa : tgl {string}, jam {int} menit {int}, keterangan {string}.")
     public void step03(String tanggal, int jam, int menit, String note) throws InterruptedException {
         preCondInputDataIzin(tanggal, jam, menit, note);
     }
@@ -30,7 +32,8 @@ public class NegativeResetPulangCepat extends AuthProviders {
     @Then("Pengguna menekan tombol reset, tanggal tidak kosong")
     public void step04() {
         izinpage().buttonReset();
-
+        String actual = izinpage().dateNotReset();
+        Assert.assertEquals(actual, "09/10/2025", "tgl tidak ke reset");
     }
     
 }

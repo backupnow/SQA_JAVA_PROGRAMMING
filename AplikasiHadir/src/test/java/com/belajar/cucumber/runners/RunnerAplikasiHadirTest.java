@@ -13,6 +13,7 @@ import io.cucumber.testng.CucumberOptions;
         //  "src/test/resources/features/05_Sakit.feature"
 }, glue = {
         "com.belajar.cucumber.definitions.authentications",
+        "com.belajar.cucumber.definitions.sidebar",
         // "com.belajar.cucumber.definitions.absensi",
         // "com.belajar.cucumber.definitions.lembur",
         // "com.belajar.cucumber.definitions.cuti",

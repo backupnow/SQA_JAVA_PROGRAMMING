@@ -70,9 +70,6 @@ public class DragnDrop {
         //jam 1 mewakli 00                  //setJam
         builder.dragAndDrop(getJamPermit(1), getJamPermit(jam+1)).perform();
         clickMinute(driver, menit);
-
-
-
     }
 
 }

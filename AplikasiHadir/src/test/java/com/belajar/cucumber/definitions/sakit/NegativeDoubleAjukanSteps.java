@@ -21,7 +21,6 @@ public class NegativeDoubleAjukanSteps extends AuthProviders {
     @When("pengguna menekan tombol Ajukan Sakit")
     public void step02(){
         sakitPage().buttonAjukanSakit();
-        
     }
 
     @When("pengguna membuka kalender untuk memilih tanggal sakit")

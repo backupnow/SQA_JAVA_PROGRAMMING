@@ -30,7 +30,6 @@ public class EmptyDataRegisterSteps extends AuthProviders{
             registerPage().setUploadSelfie(filePath); 
         }
         
-
         if (NIK.isEmpty()) {
             this.emptyField = "nik";
         } else if (fullname.isEmpty()) {

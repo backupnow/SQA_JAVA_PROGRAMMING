@@ -56,7 +56,6 @@ public class LoginPage {
     }
   }
 
-  
   public void performLogin() {
     setEmailLogin("hadirsqa1@gmail.com");
     setPasswordLogin("SQA@Hadir12345");
@@ -68,7 +67,6 @@ public class LoginPage {
     setPasswordLogin(password);
     clickMasukButton();
   }
-
 
   public void clickMasukButton() {
     masukButton.click();

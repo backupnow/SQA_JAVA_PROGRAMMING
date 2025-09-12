@@ -13,6 +13,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class PositiveResetPasswordSteps extends AuthProviders{
+
     @Given("user berada pada halaman lupa password.")
     public void step01(){
         preTest();
@@ -28,7 +29,7 @@ public class PositiveResetPasswordSteps extends AuthProviders{
     @And("user menekan tombol submit.")
     public void step03(){
         lupaPasswordPage().clickSubmit();
-        }
+    }
 
     @Then("user melihat pesan validasi {string} dan diarahkan ke halaman url {string}.")
     public void step04(String message, String url){

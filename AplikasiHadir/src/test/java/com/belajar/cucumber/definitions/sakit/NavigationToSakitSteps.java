@@ -16,7 +16,7 @@ import io.cucumber.java.en.When;
 
 public class NavigationToSakitSteps extends AuthProviders {
 
-     @Given("user berada pada halaman dashboard sebelum ke halaman sakit.")
+    @Given("user berada pada halaman dashboard sebelum ke halaman sakit.")
     public void step01(){
         Hook.driver = this;
         preConditionLogin();

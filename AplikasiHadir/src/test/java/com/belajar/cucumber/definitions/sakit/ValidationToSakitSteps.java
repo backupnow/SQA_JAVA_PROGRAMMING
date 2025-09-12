@@ -22,7 +22,6 @@ public class ValidationToSakitSteps extends AuthProviders{
     @When("user klik tombol Ajukan Sakit")
     public void step02(){
         sakitPage().buttonAjukanSakit();
-        
     }
 
     @When("user klik icon calender sakit")

@@ -80,3 +80,24 @@ Feature: Authentication Feature
   #   When user menekan burger line pada ujung kanan atas.
   #   And user menekan tombol 'Logout'.
   #   Then user berhasil keluar dari aplikasi dan kembali ke halaman login dengan url "https://magang.dikahadir.com/absen/login".
+
+  # Scenario Outline: Negative Test Change Password, Wrong input & Confirmation 
+  #     Given pengguna di bawa kehalaman Change Password
+  #     When pengguna input password baru "<password>" dan input konfirmasi "<confirmPass>"
+  #     And pengguna menekan tombol Konfirmasi New Password
+  #     Then pengguna gagal mengubah password dan melihat pesan "<messagePass>", "<messageConfirm>"
+
+  #     Examples:
+  #     | password    | confirmPass | messagePass                            | messageConfirm              |
+  #     | blabla      | blabla123   | password must be at least 8 characters | Passwords must match.       |
+  #     | @           |             |                                        | Please fill out this field. |
+  #     |             | test123     | Please fill out this field.            |                             |
+  #     |             |             | Please fill out this field.            |                             |
+  #     | Wilder1234@ | Wilder1235@ |                                        | Passwords must match.       |
+
+  # Scenario: Change Password from Aplikasi Hadir
+  #     Given pengguna berada di halaman utama atau dashboard
+  #     When pengguna klik sidebar pada ujung kanan atas
+  #     And pengguna klik ubah password dan masuk kehalaman ubah password
+  #     And pengguna mengisi password baru "SQA@Hadir12345" dan "SQA@Hadir12345", lalu submit konfirmasi password
+  #     Then pengguna berhasil melakukan ChangePassword, "Sukses mengganti password"

@@ -17,6 +17,7 @@ import com.belajar.cucumber.pages.LoginPage;
 import com.belajar.cucumber.pages.LupaPasswordPage;
 import com.belajar.cucumber.pages.RegisterPage;
 import com.belajar.cucumber.pages.SakitPage;
+import com.belajar.cucumber.sideBar.ChangePass;
 import com.belajar.cucumber.utils.DragnDrop;
 import com.belajar.cucumber.utils.DriverManager;
 
@@ -33,6 +34,7 @@ public class AuthProviders {
   private LemburPage lemburPage;
   private IzinPage izinPage;
   private SakitPage sakitPage;
+  private ChangePass changePass;
 
   public LoginPage loginPage() {
     loginPage = new LoginPage(driver);
@@ -77,6 +79,11 @@ public class AuthProviders {
   public SakitPage sakitPage(){
     sakitPage = new SakitPage(driver);
     return sakitPage;
+  }
+
+  public ChangePass changePass() {
+    changePass = new ChangePass(driver);
+    return changePass;
   }
 
   public void preTest() {

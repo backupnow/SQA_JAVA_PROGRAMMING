@@ -17,5 +17,6 @@ public class Hook {
         driver.close();
         driver = null;
     }
-  } 
+  }
+
 }

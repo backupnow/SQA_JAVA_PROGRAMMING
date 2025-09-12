@@ -35,6 +35,9 @@ public class IzinPage {
 
     @FindBy(xpath = "//button[@aria-current='date']")
     private WebElement inputTanggalField;
+    
+    @FindBy(xpath = "//input[@placeholder='mm/dd/yyyy']")
+    private WebElement getDateElementReset;
 
     @FindBy(xpath = "//button[text()='Reset']")
     private WebElement btnReset;
@@ -142,6 +145,10 @@ public class IzinPage {
 
     public String pesanNote(){
         return messageNote.getText();
+    }
+
+    public String dateNotReset() {
+        return getDateElementReset.getAttribute("value");
     }
 
     public String getValueByLabel(String labelText) {
