@@ -4,6 +4,8 @@
 ![Java](https://img.shields.io/badge/java-11%2B-blue)
 ![TestNG](https://img.shields.io/badge/TestNG-7.10.2-orange)
 ![Selenium](https://img.shields.io/badge/Selenium-4.34.0-green)
+![Cucumber](https://img.shields.io/badge/Cucumber-7.15.0-brightgreen)
+![ExtentReport](https://img.shields.io/badge/ExtentReport-5.1.1-purple)
 
 Aplikasi Hadir adalah project automation testing berbasis web untuk sistem absensi online. Dibangun dengan pendekatan **BDD (Behavior Driven Development)** menggunakan Cucumber, Selenium WebDriver, dan TestNG, project ini bertujuan untuk memastikan kualitas aplikasi HADIR melalui skenario pengujian yang mudah dibaca dan dijalankan.
 
