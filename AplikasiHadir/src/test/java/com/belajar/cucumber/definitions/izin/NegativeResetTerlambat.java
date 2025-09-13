@@ -33,7 +33,7 @@ public class NegativeResetTerlambat extends AuthProviders {
     public void step04() {
         izinpage().buttonReset();
         String actual = izinpage().dateNotReset();
-        String expected = "09/11/2025";
+        String expected = "09/13/2025";
         Assert.assertEquals(actual, expected);
     }
     

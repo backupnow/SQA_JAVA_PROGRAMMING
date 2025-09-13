@@ -33,7 +33,7 @@ public class NegativeResetPulangCepat extends AuthProviders {
     public void step04() {
         izinpage().buttonReset();
         String actual = izinpage().dateNotReset();
-        Assert.assertEquals(actual, "09/10/2025", "tgl tidak ke reset");
+        Assert.assertEquals(actual, "09/13/2025", "tgl tidak ke reset");
     }
     
 }

@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.belajar.cucumber.pages.CutiPage;
 import com.belajar.cucumber.pages.DashboardPage;
+import com.belajar.cucumber.pages.DownloadReportsPage;
 import com.belajar.cucumber.pages.IzinPage;
 import com.belajar.cucumber.pages.KoreksiAbsenPage;
 import com.belajar.cucumber.pages.LemburPage;
@@ -17,6 +18,7 @@ import com.belajar.cucumber.pages.LoginPage;
 import com.belajar.cucumber.pages.LupaPasswordPage;
 import com.belajar.cucumber.pages.RegisterPage;
 import com.belajar.cucumber.pages.SakitPage;
+import com.belajar.cucumber.pages.StaffPage;
 import com.belajar.cucumber.sideBar.ChangePass;
 import com.belajar.cucumber.utils.DragnDrop;
 import com.belajar.cucumber.utils.DriverManager;
@@ -35,6 +37,8 @@ public class AuthProviders {
   private IzinPage izinPage;
   private SakitPage sakitPage;
   private ChangePass changePass;
+  private StaffPage staffPage;
+  private DownloadReportsPage downloadReportsPage;
 
   public LoginPage loginPage() {
     loginPage = new LoginPage(driver);
@@ -84,6 +88,16 @@ public class AuthProviders {
   public ChangePass changePass() {
     changePass = new ChangePass(driver);
     return changePass;
+  }
+
+  public StaffPage staffPage() {
+    staffPage = new StaffPage(driver);
+    return staffPage;
+  }
+
+  public DownloadReportsPage downloadReportsPage() {
+    downloadReportsPage = new DownloadReportsPage(driver);
+    return downloadReportsPage;
   }
 
   public void preTest() {

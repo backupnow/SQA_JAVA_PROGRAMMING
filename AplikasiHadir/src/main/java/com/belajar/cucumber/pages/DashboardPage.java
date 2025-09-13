@@ -35,6 +35,12 @@ public class DashboardPage {
   @FindBy(xpath = "//img[@alt='Sakit']")
   private WebElement buttonSakit;
 
+  @FindBy(xpath = "//img[@alt='Staff']")
+  private WebElement staffIcon;
+
+  @FindBy(xpath = "//img[@alt='Download Reports']")
+  private WebElement reports;
+
   public DashboardPage(WebDriver driver) {
     this.driver = driver;
     PageFactory.initElements(driver, this);
@@ -52,35 +58,49 @@ public class DashboardPage {
         cutiButton.click();
     }
 
-    public void clickAbsenButton(){
+    public void clickAbsenButton() {
         absenButton.click();
     }
 
-    public void clickBurgerButton(){
+    public void clickBurgerButton() {
       burgerButton.click();
     }
 
-    public void clickLogoutButton(){
+    public void clickLogoutButton() {
       logoutButton.click();
       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
       wait.until(ExpectedConditions.urlContains("https://magang.dikahadir.com/absen/login"));    
     }
 
-    public void clikKoreksiIcon(){
+    public void clikKoreksiIcon() {
       koreksiIcon.click();
       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
       wait.until(ExpectedConditions.urlContains("https://magang.dikahadir.com/apps/absent/correction"));    
     }
 
-    public void clickIzinIcon(){
+    public void clickIzinIcon() {
       buttonIzin.click();
       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
       wait.until(ExpectedConditions.urlContains("https://magang.dikahadir.com/apps/absent/permit"));
     }
 
-    public void clickSakitIcon(){
+    public void clickSakitIcon() {
       buttonSakit.click();
       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
       wait.until(ExpectedConditions.urlContains("https://magang.dikahadir.com/apps/absent/sick"));
     }
+
+    public void clickStaffIcon() {
+      staffIcon.click();
+      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+      wait.until(ExpectedConditions.urlContains("https://magang.dikahadir.com/apps/absent/staff"));
+    }
+
+    public void clickDownloadReportsIcon() {
+      reports.click();
+      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+      wait.until(ExpectedConditions.urlContains("https://magang.dikahadir.com/apps/absent/reports/share_report"));
+    }
+
+
 }

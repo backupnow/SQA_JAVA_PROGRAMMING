@@ -4,13 +4,13 @@ Feature: Cuti Feature
 #    Given saat pengguna ada di halaman dashboard.
 #    When pengguna menekan tab cuti.
 #    Then user akan di bawa ke halaman cuti dengan url "https://magang.dikahadir.com/apps/absent/leave-client" untuk memeriksa hasil test.
-#
+
 #  Scenario: Display Info Cuti
 #    Given user saat berada di halaman dashborad.
 #    When lalu user menakan tab cuti.
 #    And lalu user click button Ajukan Cuti.
 #    Then user click Info Cuti, untuk melihat total cuti.
-#
+
 #  Scenario: Ajukan cuti dengan form kosong
 #    Given pengguna saat ini membuka halaman dashboard.
 #    When selanjutnya pengguna memilih tab cuti.

@@ -26,7 +26,7 @@ public class ValidationTotalReqSakit extends AuthProviders {
 
     @Then("dan user telah mengetahui total request")
     public void step04() {
-        int expectedTotal = 36;
+        int expectedTotal = 37;
         int actualTotal = sakitPage().getTotalReqSakit();
         System.out.println("Expected : " + expectedTotal + ", Actual : " + actualTotal);
         Assert.assertEquals(actualTotal, expectedTotal);

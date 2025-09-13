@@ -27,8 +27,9 @@ public class NegativeSignInSteps extends AuthProviders{
   }
 
   @And("pengguna menekan tombol masuk.")
-  public void step04() {
-    loginPage().clickMasukButton();
+  public void step04() throws InterruptedException {
+    loginPage().clickMasukButtonError();
+    Thread.sleep(1000);
   }
 
   @Then("pengguna akan melihat pesan kesalahan {string}.")

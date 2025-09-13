@@ -74,6 +74,12 @@ public class LoginPage {
     wait.until(ExpectedConditions.urlContains("https://magang.dikahadir.com/apps/absent"));
   }
 
+  public void clickMasukButtonError() {
+    masukButton.click();
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='MuiTypography-root MuiTypography-body1 css-1qamc72']")));
+  }
+
   public void clickRegisterPageButton() {
     registerPageButton.click();
   }
